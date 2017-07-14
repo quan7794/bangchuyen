@@ -63,6 +63,10 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.button16 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -86,10 +90,6 @@
             this.label22 = new System.Windows.Forms.Label();
             this.cbRate = new System.Windows.Forms.ComboBox();
             this.btnConnect = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -473,6 +473,42 @@
             this.tabPage3.Text = "Phân tích";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // button16
+            // 
+            this.button16.Location = new System.Drawing.Point(453, 0);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(102, 46);
+            this.button16.TabIndex = 9;
+            this.button16.Text = "Theo năm";
+            this.button16.UseVisualStyleBackColor = true;
+            // 
+            // button15
+            // 
+            this.button15.Location = new System.Drawing.Point(335, 0);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(102, 46);
+            this.button15.TabIndex = 8;
+            this.button15.Text = "Theo tháng";
+            this.button15.UseVisualStyleBackColor = true;
+            // 
+            // button14
+            // 
+            this.button14.Location = new System.Drawing.Point(218, 0);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(102, 46);
+            this.button14.TabIndex = 7;
+            this.button14.Text = "Theo tuần";
+            this.button14.UseVisualStyleBackColor = true;
+            // 
+            // button13
+            // 
+            this.button13.Location = new System.Drawing.Point(101, 0);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(102, 46);
+            this.button13.TabIndex = 6;
+            this.button13.Text = "Theo ngày";
+            this.button13.UseVisualStyleBackColor = true;
+            // 
             // label20
             // 
             this.label20.AutoSize = true;
@@ -542,36 +578,36 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(496, 23);
+            this.button4.Location = new System.Drawing.Point(370, 3);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(95, 23);
+            this.button4.Size = new System.Drawing.Size(95, 43);
             this.button4.TabIndex = 4;
             this.button4.Text = "Theo năm";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(341, 23);
+            this.button3.Location = new System.Drawing.Point(273, 3);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(91, 23);
+            this.button3.Size = new System.Drawing.Size(91, 43);
             this.button3.TabIndex = 3;
             this.button3.Text = "Theo tháng";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(201, 23);
+            this.button2.Location = new System.Drawing.Point(181, 3);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(86, 23);
+            this.button2.Size = new System.Drawing.Size(86, 43);
             this.button2.TabIndex = 2;
             this.button2.Text = "Theo tuần";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(53, 23);
+            this.button1.Location = new System.Drawing.Point(82, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 23);
+            this.button1.Size = new System.Drawing.Size(93, 43);
             this.button1.TabIndex = 1;
             this.button1.Text = "theo ngày";
             this.button1.UseVisualStyleBackColor = true;
@@ -685,42 +721,6 @@
             this.btnConnect.TabIndex = 5;
             this.btnConnect.Text = "Connect";
             this.btnConnect.UseVisualStyleBackColor = true;
-            // 
-            // button13
-            // 
-            this.button13.Location = new System.Drawing.Point(101, 0);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(102, 46);
-            this.button13.TabIndex = 6;
-            this.button13.Text = "Theo ngày";
-            this.button13.UseVisualStyleBackColor = true;
-            // 
-            // button14
-            // 
-            this.button14.Location = new System.Drawing.Point(218, 0);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(102, 46);
-            this.button14.TabIndex = 7;
-            this.button14.Text = "Theo tuần";
-            this.button14.UseVisualStyleBackColor = true;
-            // 
-            // button15
-            // 
-            this.button15.Location = new System.Drawing.Point(335, 0);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(102, 46);
-            this.button15.TabIndex = 8;
-            this.button15.Text = "Theo tháng";
-            this.button15.UseVisualStyleBackColor = true;
-            // 
-            // button16
-            // 
-            this.button16.Location = new System.Drawing.Point(453, 0);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(102, 46);
-            this.button16.TabIndex = 9;
-            this.button16.Text = "Theo năm";
-            this.button16.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
