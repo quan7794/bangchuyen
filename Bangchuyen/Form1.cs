@@ -19,7 +19,7 @@ namespace Bangchuyen
         public Form1()
         {
             InitializeComponent();
-
+            // sửa 1 dòng làm ví dụ, 
 
         }
 
