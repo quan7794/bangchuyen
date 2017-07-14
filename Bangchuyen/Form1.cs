@@ -128,5 +128,10 @@ namespace Bangchuyen
             btnConnect.Text = "Kết nối";
             btnConnect.BackColor = Color.White;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
