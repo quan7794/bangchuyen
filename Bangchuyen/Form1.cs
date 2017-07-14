@@ -100,6 +100,8 @@ namespace Bangchuyen
                 serialPort.Open();
                 btnConnect.Enabled = false;
                     btnDisconnect.Enabled = true;
+                    btnConnect.Text = "Đã kết nối";
+                    btnConnect.BackColor = Color.Coral;
 
             }
             }
@@ -123,6 +125,8 @@ namespace Bangchuyen
             serialPort.Close();
             btnConnect.Enabled = true;
             btnDisconnect.Enabled = false;
+            btnConnect.Text = "Kết nối";
+            btnConnect.BackColor = Color.White;
         }
     }
 }
