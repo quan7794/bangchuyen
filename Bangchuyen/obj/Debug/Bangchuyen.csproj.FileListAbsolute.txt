@@ -7,3 +7,12 @@ c:\users\mypc\documents\visual studio 2015\Projects\Bangchuyen\Bangchuyen\obj\De
 c:\users\mypc\documents\visual studio 2015\Projects\Bangchuyen\Bangchuyen\obj\Debug\Bangchuyen.csproj.GenerateResource.Cache
 c:\users\mypc\documents\visual studio 2015\Projects\Bangchuyen\Bangchuyen\obj\Debug\Bangchuyen.exe
 c:\users\mypc\documents\visual studio 2015\Projects\Bangchuyen\Bangchuyen\obj\Debug\Bangchuyen.pdb
+C:\Users\MyPC\Documents\bangchuyen2\Bangchuyen\bin\Debug\Bangchuyen.exe.config
+C:\Users\MyPC\Documents\bangchuyen2\Bangchuyen\obj\Debug\Bangchuyen.exe
+C:\Users\MyPC\Documents\bangchuyen2\Bangchuyen\obj\Debug\Bangchuyen.pdb
+C:\Users\MyPC\Documents\bangchuyen2\Bangchuyen\bin\Debug\Bangchuyen.exe
+C:\Users\MyPC\Documents\bangchuyen2\Bangchuyen\bin\Debug\Bangchuyen.pdb
+C:\Users\MyPC\Documents\bangchuyen2\Bangchuyen\obj\Debug\Bangchuyen.csprojResolveAssemblyReference.cache
+C:\Users\MyPC\Documents\bangchuyen2\Bangchuyen\obj\Debug\Bangchuyen.Form1.resources
+C:\Users\MyPC\Documents\bangchuyen2\Bangchuyen\obj\Debug\Bangchuyen.Properties.Resources.resources
+C:\Users\MyPC\Documents\bangchuyen2\Bangchuyen\obj\Debug\Bangchuyen.csproj.GenerateResource.Cache
