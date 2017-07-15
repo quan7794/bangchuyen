@@ -73,7 +73,7 @@ namespace Bangchuyen
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        public void Form1_Load(object sender, EventArgs e)
         {
             cbComp.DataSource = SerialPort.GetPortNames();
             cbRate.Items.Add(9600);
@@ -132,6 +132,19 @@ namespace Bangchuyen
         private void button2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Refresh_Click(object sender, EventArgs e)
+        {
+            cbComp.DataSource = SerialPort.GetPortNames();
+            cbRate.SelectedIndex = 3;
+            cbRate.Text = serialPort.BaudRate.ToString();
+            btnDisconnect.Enabled = false;
         }
     }
 }
