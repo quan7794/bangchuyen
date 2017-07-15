@@ -85,7 +85,7 @@
             this.btnExportWord = new System.Windows.Forms.Button();
             this.btnExportExcel = new System.Windows.Forms.Button();
             this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
+            this.tbAbout = new System.Windows.Forms.RichTextBox();
             this.cbComp = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
@@ -104,7 +104,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tbPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.DtPicker = new System.Windows.Forms.DateTimePicker();
             this.button7 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -700,7 +700,7 @@
             // tabPage6
             // 
             this.tabPage6.AllowDrop = true;
-            this.tabPage6.Controls.Add(this.richTextBox3);
+            this.tabPage6.Controls.Add(this.tbAbout);
             this.tabPage6.Location = new System.Drawing.Point(4, 25);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Size = new System.Drawing.Size(973, 456);
@@ -708,14 +708,14 @@
             this.tabPage6.Text = "About";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
-            // richTextBox3
+            // tbAbout
             // 
-            this.richTextBox3.Location = new System.Drawing.Point(28, 19);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.ReadOnly = true;
-            this.richTextBox3.Size = new System.Drawing.Size(914, 414);
-            this.richTextBox3.TabIndex = 0;
-            this.richTextBox3.Text = "";
+            this.tbAbout.Location = new System.Drawing.Point(28, 19);
+            this.tbAbout.Name = "tbAbout";
+            this.tbAbout.ReadOnly = true;
+            this.tbAbout.Size = new System.Drawing.Size(914, 414);
+            this.tbAbout.TabIndex = 0;
+            this.tbAbout.Text = "";
             // 
             // cbComp
             // 
@@ -886,15 +886,15 @@
             this.tbPanel.Size = new System.Drawing.Size(893, 273);
             this.tbPanel.TabIndex = 22;
             // 
-            // dateTimePicker1
+            // DtPicker
             // 
-            this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.DtPicker.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(725, 7);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 17;
+            this.DtPicker.Location = new System.Drawing.Point(725, 7);
+            this.DtPicker.Name = "DtPicker";
+            this.DtPicker.Size = new System.Drawing.Size(200, 22);
+            this.DtPicker.TabIndex = 17;
             // 
             // button7
             // 
@@ -912,7 +912,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(979, 512);
             this.Controls.Add(this.button7);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.DtPicker);
             this.Controls.Add(this.btnDisconnect);
             this.Controls.Add(this.btnConnect);
             this.Controls.Add(this.cbRate);
@@ -998,7 +998,7 @@
         private System.Windows.Forms.TextBox tbFailedWeight;
         private System.Windows.Forms.TextBox tbFailedRate;
         private System.Windows.Forms.TextBox tbStability;
-        private System.Windows.Forms.RichTextBox richTextBox3;
+        private System.Windows.Forms.RichTextBox tbAbout;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
@@ -1018,7 +1018,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TableLayoutPanel tbPanel;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker DtPicker;
         private System.Windows.Forms.Button button7;
     }
 }
