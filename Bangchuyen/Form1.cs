@@ -15,7 +15,7 @@ namespace Bangchuyen
     public partial class Form1 : Form
     {
         SerialPort serialPort = new SerialPort();
-
+        String data = null;
         public Form1()
         {
             InitializeComponent();
@@ -145,6 +145,23 @@ namespace Bangchuyen
             cbRate.SelectedIndex = 3;
             cbRate.Text = serialPort.BaudRate.ToString();
             btnDisconnect.Enabled = false;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            while(true) {
+                try
+                {
+                    data = serialPort.ReadLine();
+                    String[] substrings = data.Split(',');
+                    btnServo1.Text = substrings[1];
+
+                } catch 
+                {
+                    MessageBox.Show("Không đọc được bất kì thông tin nào, xin thử lại", "Thông báo:");
+                }
+                }
+
         }
     }
 }
