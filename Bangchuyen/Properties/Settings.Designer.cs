@@ -22,5 +22,16 @@ namespace Bangchuyen.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=QUANMTSE61192\\SQLEXPRESS;Initial Catalog=Bangchuyen;Persist Security " +
+            "Info=True;User ID=sa;Password=123456")]
+        public string BangchuyenConnectionString {
+            get {
+                return ((string)(this["BangchuyenConnectionString"]));
+            }
+        }
     }
 }

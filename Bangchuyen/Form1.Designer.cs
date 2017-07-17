@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.cbComp = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
@@ -58,18 +59,23 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.tabFunction = new System.Windows.Forms.TabPage();
+            this.dataBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bangchuyenDataSet = new Bangchuyen.BangchuyenDataSet();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
             this.btnServo1 = new System.Windows.Forms.Button();
             this.btnTiemcan1 = new System.Windows.Forms.Button();
             this.btnServo2 = new System.Windows.Forms.Button();
             this.btnServo3 = new System.Windows.Forms.Button();
             this.btnTiemcan2 = new System.Windows.Forms.Button();
             this.btnColorValue = new System.Windows.Forms.Button();
-            this.btnFlashColorSensor = new System.Windows.Forms.Button();
-            this.tbColorCode = new System.Windows.Forms.TextBox();
+            this.tbRGB = new System.Windows.Forms.TextBox();
+            this.tbHex = new System.Windows.Forms.TextBox();
             this.tbSensorWeight = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -77,7 +83,15 @@
             this.label7 = new System.Windows.Forms.Label();
             this.tabInformation = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.tbPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.dataDataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewCheckBoxColumn3 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dataGridViewCheckBoxColumn4 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.tbFailedlRate = new System.Windows.Forms.TextBox();
             this.tbFail = new System.Windows.Forms.TextBox();
             this.tbPepsiNormal = new System.Windows.Forms.TextBox();
@@ -92,17 +106,20 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
+            this.bangchuyenDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataTableAdapter = new Bangchuyen.BangchuyenDataSetTableAdapters.DataTableAdapter();
+            this.tableAdapterManager = new Bangchuyen.BangchuyenDataSetTableAdapters.TableAdapterManager();
             this.tabAbout.SuspendLayout();
             this.tabExport.SuspendLayout();
             this.tabAnalysis.SuspendLayout();
             this.tabFunction.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bangchuyenDataSet)).BeginInit();
             this.tabInformation.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataDataGridView1)).BeginInit();
             this.tabControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bangchuyenDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // cbComp
@@ -168,7 +185,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DtPicker.Location = new System.Drawing.Point(755, 5);
             this.DtPicker.Name = "DtPicker";
-            this.DtPicker.Size = new System.Drawing.Size(199, 22);
+            this.DtPicker.Size = new System.Drawing.Size(203, 22);
             this.DtPicker.TabIndex = 17;
             // 
             // button7
@@ -394,12 +411,11 @@
             this.tabFunction.Controls.Add(this.btnServo3);
             this.tabFunction.Controls.Add(this.btnTiemcan2);
             this.tabFunction.Controls.Add(this.btnColorValue);
-            this.tabFunction.Controls.Add(this.btnFlashColorSensor);
-            this.tabFunction.Controls.Add(this.tbColorCode);
+            this.tabFunction.Controls.Add(this.tbRGB);
+            this.tabFunction.Controls.Add(this.tbHex);
             this.tabFunction.Controls.Add(this.tbSensorWeight);
             this.tabFunction.Controls.Add(this.label14);
             this.tabFunction.Controls.Add(this.label13);
-            this.tabFunction.Controls.Add(this.label12);
             this.tabFunction.Controls.Add(this.label11);
             this.tabFunction.Controls.Add(this.label10);
             this.tabFunction.Controls.Add(this.label9);
@@ -415,93 +431,143 @@
             this.tabFunction.Text = "Chức năng";
             this.tabFunction.UseVisualStyleBackColor = true;
             // 
+            // dataBindingSource
+            // 
+            this.dataBindingSource.DataMember = "Data";
+            this.dataBindingSource.DataSource = this.bangchuyenDataSet;
+            // 
+            // bangchuyenDataSet
+            // 
+            this.bangchuyenDataSet.DataSetName = "BangchuyenDataSet";
+            this.bangchuyenDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(431, 317);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(24, 17);
+            this.label30.TabIndex = 16;
+            this.label30.Text = "độ";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(431, 186);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(38, 17);
+            this.label28.TabIndex = 16;
+            this.label28.Text = "Gam";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(431, 99);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(24, 17);
+            this.label26.TabIndex = 16;
+            this.label26.Text = "độ";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(431, 51);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(24, 17);
+            this.label25.TabIndex = 16;
+            this.label25.Text = "độ";
+            // 
             // btnServo1
             // 
             this.btnServo1.Location = new System.Drawing.Point(215, 41);
             this.btnServo1.Name = "btnServo1";
-            this.btnServo1.Size = new System.Drawing.Size(193, 34);
+            this.btnServo1.Size = new System.Drawing.Size(210, 34);
             this.btnServo1.TabIndex = 15;
-            this.btnServo1.Text = "ON";
+            this.btnServo1.Text = "0";
             this.btnServo1.UseVisualStyleBackColor = true;
             // 
             // btnTiemcan1
             // 
             this.btnTiemcan1.Location = new System.Drawing.Point(215, 133);
             this.btnTiemcan1.Name = "btnTiemcan1";
-            this.btnTiemcan1.Size = new System.Drawing.Size(193, 34);
+            this.btnTiemcan1.Size = new System.Drawing.Size(210, 34);
             this.btnTiemcan1.TabIndex = 15;
-            this.btnTiemcan1.Text = "ON";
+            this.btnTiemcan1.Text = "Không phát hiện vật chắn";
             this.btnTiemcan1.UseVisualStyleBackColor = true;
             // 
             // btnServo2
             // 
             this.btnServo2.Location = new System.Drawing.Point(215, 90);
             this.btnServo2.Name = "btnServo2";
-            this.btnServo2.Size = new System.Drawing.Size(193, 34);
+            this.btnServo2.Size = new System.Drawing.Size(210, 34);
             this.btnServo2.TabIndex = 15;
-            this.btnServo2.Text = "ON";
+            this.btnServo2.Text = "0";
             this.btnServo2.UseVisualStyleBackColor = true;
             // 
             // btnServo3
             // 
-            this.btnServo3.Location = new System.Drawing.Point(215, 339);
+            this.btnServo3.Location = new System.Drawing.Point(215, 308);
             this.btnServo3.Name = "btnServo3";
-            this.btnServo3.Size = new System.Drawing.Size(193, 34);
+            this.btnServo3.Size = new System.Drawing.Size(210, 34);
             this.btnServo3.TabIndex = 15;
-            this.btnServo3.Text = "ON";
+            this.btnServo3.Text = "0";
             this.btnServo3.UseVisualStyleBackColor = true;
             // 
             // btnTiemcan2
             // 
             this.btnTiemcan2.Location = new System.Drawing.Point(215, 218);
             this.btnTiemcan2.Name = "btnTiemcan2";
-            this.btnTiemcan2.Size = new System.Drawing.Size(193, 34);
+            this.btnTiemcan2.Size = new System.Drawing.Size(210, 34);
             this.btnTiemcan2.TabIndex = 15;
-            this.btnTiemcan2.Text = "ON";
+            this.btnTiemcan2.Text = "Không phát hiện vật chắn";
             this.btnTiemcan2.UseVisualStyleBackColor = true;
             // 
             // btnColorValue
             // 
-            this.btnColorValue.Location = new System.Drawing.Point(215, 260);
+            this.btnColorValue.Location = new System.Drawing.Point(431, 260);
             this.btnColorValue.Name = "btnColorValue";
-            this.btnColorValue.Size = new System.Drawing.Size(75, 33);
+            this.btnColorValue.Size = new System.Drawing.Size(41, 33);
             this.btnColorValue.TabIndex = 15;
-            this.btnColorValue.Text = "ON";
             this.btnColorValue.UseVisualStyleBackColor = true;
             // 
-            // btnFlashColorSensor
+            // tbRGB
             // 
-            this.btnFlashColorSensor.Location = new System.Drawing.Point(215, 299);
-            this.btnFlashColorSensor.Name = "btnFlashColorSensor";
-            this.btnFlashColorSensor.Size = new System.Drawing.Size(193, 34);
-            this.btnFlashColorSensor.TabIndex = 15;
-            this.btnFlashColorSensor.Text = "ON";
-            this.btnFlashColorSensor.UseVisualStyleBackColor = true;
+            this.tbRGB.Location = new System.Drawing.Point(215, 260);
+            this.tbRGB.MaximumSize = new System.Drawing.Size(1000, 1000);
+            this.tbRGB.Multiline = true;
+            this.tbRGB.Name = "tbRGB";
+            this.tbRGB.ReadOnly = true;
+            this.tbRGB.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.tbRGB.Size = new System.Drawing.Size(138, 33);
+            this.tbRGB.TabIndex = 13;
+            this.tbRGB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // tbColorCode
+            // tbHex
             // 
-            this.tbColorCode.Location = new System.Drawing.Point(296, 260);
-            this.tbColorCode.MaximumSize = new System.Drawing.Size(1000, 1000);
-            this.tbColorCode.Multiline = true;
-            this.tbColorCode.Name = "tbColorCode";
-            this.tbColorCode.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tbColorCode.Size = new System.Drawing.Size(112, 33);
-            this.tbColorCode.TabIndex = 13;
-            this.tbColorCode.Text = "Mã màu";
-            this.tbColorCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbHex.Location = new System.Drawing.Point(359, 260);
+            this.tbHex.MaximumSize = new System.Drawing.Size(1000, 1000);
+            this.tbHex.Multiline = true;
+            this.tbHex.Name = "tbHex";
+            this.tbHex.ReadOnly = true;
+            this.tbHex.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.tbHex.Size = new System.Drawing.Size(66, 33);
+            this.tbHex.TabIndex = 13;
+            this.tbHex.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tbSensorWeight
             // 
             this.tbSensorWeight.Location = new System.Drawing.Point(215, 183);
             this.tbSensorWeight.Name = "tbSensorWeight";
             this.tbSensorWeight.ReadOnly = true;
-            this.tbSensorWeight.Size = new System.Drawing.Size(193, 22);
+            this.tbSensorWeight.Size = new System.Drawing.Size(210, 22);
             this.tbSensorWeight.TabIndex = 11;
+            this.tbSensorWeight.Text = "0";
+            this.tbSensorWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(31, 348);
+            this.label14.Location = new System.Drawing.Point(31, 317);
             this.label14.Name = "label14";
             this.label14.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label14.Size = new System.Drawing.Size(61, 17);
@@ -517,16 +583,6 @@
             this.label13.Size = new System.Drawing.Size(140, 17);
             this.label13.TabIndex = 6;
             this.label13.Text = "Cảm biến tiệm cận 2:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(29, 308);
-            this.label12.Name = "label12";
-            this.label12.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label12.Size = new System.Drawing.Size(156, 17);
-            this.label12.TabIndex = 5;
-            this.label12.Text = "Đèn cảm biến màu sắc:";
             // 
             // label11
             // 
@@ -596,7 +652,7 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.tbPanel);
+            this.panel2.Controls.Add(this.dataDataGridView1);
             this.panel2.Controls.Add(this.tbFailedlRate);
             this.panel2.Controls.Add(this.tbFail);
             this.panel2.Controls.Add(this.tbPepsiNormal);
@@ -607,23 +663,79 @@
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(39, 73);
+            this.panel2.Location = new System.Drawing.Point(29, 6);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(894, 369);
+            this.panel2.Size = new System.Drawing.Size(894, 421);
             this.panel2.TabIndex = 16;
             // 
-            // tbPanel
+            // dataDataGridView1
             // 
-            this.tbPanel.ColumnCount = 2;
-            this.tbPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tbPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tbPanel.Location = new System.Drawing.Point(0, 95);
-            this.tbPanel.Name = "tbPanel";
-            this.tbPanel.RowCount = 2;
-            this.tbPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tbPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tbPanel.Size = new System.Drawing.Size(893, 273);
-            this.tbPanel.TabIndex = 22;
+            this.dataDataGridView1.AutoGenerateColumns = false;
+            this.dataDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewCheckBoxColumn3,
+            this.dataGridViewCheckBoxColumn4});
+            this.dataDataGridView1.DataSource = this.dataBindingSource;
+            this.dataDataGridView1.Location = new System.Drawing.Point(23, 88);
+            this.dataDataGridView1.Name = "dataDataGridView1";
+            this.dataDataGridView1.RowTemplate.Height = 24;
+            this.dataDataGridView1.Size = new System.Drawing.Size(847, 328);
+            this.dataDataGridView1.TabIndex = 21;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "ID";
+            this.dataGridViewTextBoxColumn7.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Name";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Name";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Weight";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Weight";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "ColorR";
+            this.dataGridViewTextBoxColumn10.HeaderText = "ColorR";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "colorG";
+            this.dataGridViewTextBoxColumn11.HeaderText = "colorG";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "colorB";
+            this.dataGridViewTextBoxColumn12.HeaderText = "colorB";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            // 
+            // dataGridViewCheckBoxColumn3
+            // 
+            this.dataGridViewCheckBoxColumn3.DataPropertyName = "okLight";
+            this.dataGridViewCheckBoxColumn3.HeaderText = "okLight";
+            this.dataGridViewCheckBoxColumn3.Name = "dataGridViewCheckBoxColumn3";
+            // 
+            // dataGridViewCheckBoxColumn4
+            // 
+            this.dataGridViewCheckBoxColumn4.DataPropertyName = "okNormal";
+            this.dataGridViewCheckBoxColumn4.HeaderText = "okNormal";
+            this.dataGridViewCheckBoxColumn4.Name = "dataGridViewCheckBoxColumn4";
             // 
             // tbFailedlRate
             // 
@@ -730,7 +842,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePicker1.Location = new System.Drawing.Point(755, 34);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(199, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(203, 22);
             this.dateTimePicker1.TabIndex = 19;
             // 
             // label23
@@ -751,46 +863,26 @@
             this.label24.TabIndex = 21;
             this.label24.Text = "Thời gian bắt đầu";
             // 
-            // label25
+            // bangchuyenDataSetBindingSource
             // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(431, 51);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(24, 17);
-            this.label25.TabIndex = 16;
-            this.label25.Text = "độ";
+            this.bangchuyenDataSetBindingSource.DataSource = this.bangchuyenDataSet;
+            this.bangchuyenDataSetBindingSource.Position = 0;
             // 
-            // label26
+            // dataTableAdapter
             // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(431, 99);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(24, 17);
-            this.label26.TabIndex = 16;
-            this.label26.Text = "độ";
+            this.dataTableAdapter.ClearBeforeFill = true;
             // 
-            // label28
+            // tableAdapterManager
             // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(431, 186);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(38, 17);
-            this.label28.TabIndex = 16;
-            this.label28.Text = "Gam";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(431, 348);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(24, 17);
-            this.label30.TabIndex = 16;
-            this.label30.Text = "độ";
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.DataTableAdapter = this.dataTableAdapter;
+            this.tableAdapterManager.UpdateOrder = Bangchuyen.BangchuyenDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(979, 512);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.label23);
@@ -818,10 +910,14 @@
             this.tabAnalysis.PerformLayout();
             this.tabFunction.ResumeLayout(false);
             this.tabFunction.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bangchuyenDataSet)).EndInit();
             this.tabInformation.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataDataGridView1)).EndInit();
             this.tabControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bangchuyenDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -864,12 +960,10 @@
         private System.Windows.Forms.Button btnServo3;
         private System.Windows.Forms.Button btnTiemcan2;
         private System.Windows.Forms.Button btnColorValue;
-        private System.Windows.Forms.Button btnFlashColorSensor;
-        private System.Windows.Forms.TextBox tbColorCode;
+        private System.Windows.Forms.TextBox tbHex;
         private System.Windows.Forms.TextBox tbSensorWeight;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
@@ -877,7 +971,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TabPage tabInformation;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TableLayoutPanel tbPanel;
         private System.Windows.Forms.TextBox tbFailedlRate;
         private System.Windows.Forms.TextBox tbFail;
         private System.Windows.Forms.TextBox tbPepsiNormal;
@@ -896,6 +989,21 @@
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.TextBox tbRGB;
+        private System.Windows.Forms.BindingSource bangchuyenDataSetBindingSource;
+        private BangchuyenDataSet bangchuyenDataSet;
+        private System.Windows.Forms.BindingSource dataBindingSource;
+        private BangchuyenDataSetTableAdapters.DataTableAdapter dataTableAdapter;
+        private BangchuyenDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.DataGridView dataDataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn3;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn4;
     }
 }
 
