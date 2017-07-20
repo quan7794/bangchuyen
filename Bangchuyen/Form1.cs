@@ -98,7 +98,41 @@ namespace Bangchuyen
             cbRate.Items.Add(250000);
             cbRate.SelectedIndex = 0;
             btnDisconnect.Enabled = false;
-           
+            try
+            {
+                myConnection.Open();
+                 MessageBox.Show("Kết nối thành công!");
+                cmd = new SqlCommand("insert into Data(Name, Weight, ColorR, ColorG, ColorB, okLight,okNormal) " +
+                    "values(@name, @weight, @colorr, @colorg, @colorb,@oklight,@oknormal)", myConnection);
+
+                cmd.Parameters.AddWithValue("@name", DateTime.Parse("2017-01-01 00:00:00"));
+                cmd.Parameters.AddWithValue("@weight", 350);
+                cmd.Parameters.AddWithValue("@colorr", 230);
+                cmd.Parameters.AddWithValue("@colorg", 123);
+                cmd.Parameters.AddWithValue("@colorb", 123);
+                cmd.Parameters.AddWithValue("@oklight", 1);
+                cmd.Parameters.AddWithValue("@oknormal", 0);
+                cmd.ExecuteNonQuery();
+                myConnection.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Lỗi");
+            }
+            var a = myConnection.Database.ToList();
+            #region load data from db
+            using (BangchuyenDataSet db = new BangchuyenDataSet())
+            {
+
+                ChartOverview.DataSource = db.Data.ToList();
+                ChartOverview.Series["Đạt"].XValueMember = "Số lượng";
+                ChartOverview.Series["Đạt"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
+                ChartOverview.Series["Lỗi"].YValueMembers = "Năm";
+                ChartOverview.Series["Lỗi"].YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
+            }
+            #endregion
 
             //#region chart
             //ChartAll.Series["Đạt"].Points.AddXY("Tháng 1", 12);
@@ -110,7 +144,7 @@ namespace Bangchuyen
             //ChartAll.Series["Lỗi"].Points.AddXY("Tháng 2", 67);
             //#endregion
 
-           
+
         }
         #region Recieve data
         private void btnConnect_Click(object sender, EventArgs e)
@@ -232,6 +266,41 @@ namespace Bangchuyen
                 case 2: //phan tich tab
                     break;
                 case 3: // chart tab
+                    //try
+                    //{
+                    //    myConnection.Open();
+                    //    // MessageBox.Show("Kết nối thành công!");
+                    //    cmd = new SqlCommand("insert into Data(Name, Weight, ColorR, ColorG, ColorB, okLight,okNormal) " +
+                    //        "values(@name, @weight, @colorr, @colorg, @colorb,@oklight,@oknormal)", myConnection);
+
+                    //    cmd.Parameters.AddWithValue("@name", DateTime.Parse("2017-01-01 00:00:00"));
+                    //    cmd.Parameters.AddWithValue("@weight", 350);
+                    //    cmd.Parameters.AddWithValue("@colorr", 230);
+                    //    cmd.Parameters.AddWithValue("@colorg", 123);
+                    //    cmd.Parameters.AddWithValue("@colorb", 123);
+                    //    cmd.Parameters.AddWithValue("@oklight", 1);
+                    //    cmd.Parameters.AddWithValue("@oknormal", 0);
+                    //    cmd.ExecuteNonQuery();
+                    //    myConnection.Close();
+
+
+                    //}
+                    //catch (Exception ex)
+                    //{
+                    //    MessageBox.Show(ex.Message, "Lỗi");
+                    //}
+                    //var a = myConnection.Database.ToList();
+                    //#region load data from db
+                    //using (BangchuyenDataSet db = new BangchuyenDataSet())
+                    //{
+
+                    //    ChartOverview.DataSource = db.Data.ToList();
+                    //    ChartOverview.Series["Đạt"].XValueMember = "Số lượng";
+                    //    ChartOverview.Series["Đạt"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
+                    //    ChartOverview.Series["Lỗi"].YValueMembers = "Năm";
+                    //    ChartOverview.Series["Lỗi"].YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Int32;
+                    //}
+                    //#endregion
                     break;
                 case 4: // export tab
                     break;
