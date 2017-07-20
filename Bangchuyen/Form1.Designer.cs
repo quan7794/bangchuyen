@@ -29,6 +29,20 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series16 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series17 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title10 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea11 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend11 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series18 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series19 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title11 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea12 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend12 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series20 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title12 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.cbComp = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
@@ -45,6 +59,9 @@
             this.btnExportWord = new System.Windows.Forms.Button();
             this.btnExportExcel = new System.Windows.Forms.Button();
             this.tabChart = new System.Windows.Forms.TabPage();
+            this.ChartAll = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.ChartOverview = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.ChartType = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabAnalysis = new System.Windows.Forms.TabPage();
             this.tbAdvice = new System.Windows.Forms.RichTextBox();
             this.tbComment = new System.Windows.Forms.RichTextBox();
@@ -59,8 +76,6 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.tabFunction = new System.Windows.Forms.TabPage();
-            this.dataBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bangchuyenDataSet = new Bangchuyen.BangchuyenDataSet();
             this.label30 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
@@ -84,14 +99,6 @@
             this.tabInformation = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataDataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewCheckBoxColumn3 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.dataGridViewCheckBoxColumn4 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.tbFailedlRate = new System.Windows.Forms.TextBox();
             this.tbFail = new System.Windows.Forms.TextBox();
             this.tbPepsiNormal = new System.Windows.Forms.TextBox();
@@ -103,22 +110,37 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtPicker2 = new System.Windows.Forms.DateTimePicker();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewCheckBoxColumn3 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dataGridViewCheckBoxColumn4 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dataBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bangchuyenDataSet = new Bangchuyen.BangchuyenDataSet();
             this.bangchuyenDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataTableAdapter = new Bangchuyen.BangchuyenDataSetTableAdapters.DataTableAdapter();
             this.tableAdapterManager = new Bangchuyen.BangchuyenDataSetTableAdapters.TableAdapterManager();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.tabAbout.SuspendLayout();
             this.tabExport.SuspendLayout();
+            this.tabChart.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ChartAll)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ChartOverview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ChartType)).BeginInit();
             this.tabAnalysis.SuspendLayout();
             this.tabFunction.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bangchuyenDataSet)).BeginInit();
             this.tabInformation.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataDataGridView1)).BeginInit();
             this.tabControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bangchuyenDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bangchuyenDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -183,10 +205,11 @@
             this.DtPicker.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DtPicker.Location = new System.Drawing.Point(755, 5);
+            this.DtPicker.Location = new System.Drawing.Point(740, 6);
             this.DtPicker.Name = "DtPicker";
-            this.DtPicker.Size = new System.Drawing.Size(203, 22);
+            this.DtPicker.Size = new System.Drawing.Size(139, 22);
             this.DtPicker.TabIndex = 17;
+            this.DtPicker.ValueChanged += new System.EventHandler(this.DtPicker_ValueChanged);
             // 
             // button7
             // 
@@ -272,12 +295,85 @@
             // 
             // tabChart
             // 
+            this.tabChart.Controls.Add(this.ChartAll);
+            this.tabChart.Controls.Add(this.ChartOverview);
+            this.tabChart.Controls.Add(this.ChartType);
             this.tabChart.Location = new System.Drawing.Point(4, 25);
             this.tabChart.Name = "tabChart";
             this.tabChart.Size = new System.Drawing.Size(973, 430);
             this.tabChart.TabIndex = 3;
             this.tabChart.Text = "Biểu đồ";
             this.tabChart.UseVisualStyleBackColor = true;
+            // 
+            // ChartAll
+            // 
+            chartArea10.Name = "ChartArea1";
+            this.ChartAll.ChartAreas.Add(chartArea10);
+            legend10.Name = "Legend1";
+            this.ChartAll.Legends.Add(legend10);
+            this.ChartAll.Location = new System.Drawing.Point(8, 207);
+            this.ChartAll.Name = "ChartAll";
+            series16.ChartArea = "ChartArea1";
+            series16.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series16.Legend = "Legend1";
+            series16.Name = "Đạt";
+            series17.ChartArea = "ChartArea1";
+            series17.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series17.Legend = "Legend1";
+            series17.Name = "Lỗi";
+            series17.YValuesPerPoint = 4;
+            this.ChartAll.Series.Add(series16);
+            this.ChartAll.Series.Add(series17);
+            this.ChartAll.Size = new System.Drawing.Size(965, 220);
+            this.ChartAll.TabIndex = 2;
+            this.ChartAll.Text = "chart3";
+            title10.Name = "Biểu đồ tăng trưởng";
+            title10.Text = "Biểu đồ tăng trưởng";
+            this.ChartAll.Titles.Add(title10);
+            // 
+            // ChartOverview
+            // 
+            chartArea11.Name = "ChartArea1";
+            this.ChartOverview.ChartAreas.Add(chartArea11);
+            legend11.Name = "Legend1";
+            this.ChartOverview.Legends.Add(legend11);
+            this.ChartOverview.Location = new System.Drawing.Point(8, 0);
+            this.ChartOverview.Name = "ChartOverview";
+            series18.ChartArea = "ChartArea1";
+            series18.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series18.Legend = "Legend1";
+            series18.Name = "Đạt";
+            series19.ChartArea = "ChartArea1";
+            series19.Legend = "Legend1";
+            series19.Name = "Lỗi";
+            this.ChartOverview.Series.Add(series18);
+            this.ChartOverview.Series.Add(series19);
+            this.ChartOverview.Size = new System.Drawing.Size(473, 217);
+            this.ChartOverview.TabIndex = 0;
+            this.ChartOverview.Text = "chart1";
+            title11.Name = "Title1";
+            title11.Text = "Tổng quan";
+            this.ChartOverview.Titles.Add(title11);
+            // 
+            // ChartType
+            // 
+            chartArea12.Name = "ChartArea1";
+            this.ChartType.ChartAreas.Add(chartArea12);
+            legend12.Name = "Legend5";
+            this.ChartType.Legends.Add(legend12);
+            this.ChartType.Location = new System.Drawing.Point(487, 0);
+            this.ChartType.Name = "ChartType";
+            series20.ChartArea = "ChartArea1";
+            series20.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series20.Legend = "Legend5";
+            series20.Name = "Đạt";
+            this.ChartType.Series.Add(series20);
+            this.ChartType.Size = new System.Drawing.Size(483, 217);
+            this.ChartType.TabIndex = 0;
+            this.ChartType.Text = "chart1";
+            title12.Name = "Phân loại";
+            title12.Text = "Phân loại";
+            this.ChartType.Titles.Add(title12);
             // 
             // tabAnalysis
             // 
@@ -430,16 +526,6 @@
             this.tabFunction.TabIndex = 1;
             this.tabFunction.Text = "Chức năng";
             this.tabFunction.UseVisualStyleBackColor = true;
-            // 
-            // dataBindingSource
-            // 
-            this.dataBindingSource.DataMember = "Data";
-            this.dataBindingSource.DataSource = this.bangchuyenDataSet;
-            // 
-            // bangchuyenDataSet
-            // 
-            this.bangchuyenDataSet.DataSetName = "BangchuyenDataSet";
-            this.bangchuyenDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label30
             // 
@@ -688,55 +774,6 @@
             this.dataDataGridView1.Size = new System.Drawing.Size(847, 328);
             this.dataDataGridView1.TabIndex = 21;
             // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "ID";
-            this.dataGridViewTextBoxColumn7.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "Name";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Name";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "Weight";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Weight";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "ColorR";
-            this.dataGridViewTextBoxColumn10.HeaderText = "ColorR";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "colorG";
-            this.dataGridViewTextBoxColumn11.HeaderText = "colorG";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "colorB";
-            this.dataGridViewTextBoxColumn12.HeaderText = "colorB";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            // 
-            // dataGridViewCheckBoxColumn3
-            // 
-            this.dataGridViewCheckBoxColumn3.DataPropertyName = "okLight";
-            this.dataGridViewCheckBoxColumn3.HeaderText = "okLight";
-            this.dataGridViewCheckBoxColumn3.Name = "dataGridViewCheckBoxColumn3";
-            // 
-            // dataGridViewCheckBoxColumn4
-            // 
-            this.dataGridViewCheckBoxColumn4.DataPropertyName = "okNormal";
-            this.dataGridViewCheckBoxColumn4.HeaderText = "okNormal";
-            this.dataGridViewCheckBoxColumn4.Name = "dataGridViewCheckBoxColumn4";
-            // 
             // tbFailedlRate
             // 
             this.tbFailedlRate.Location = new System.Drawing.Point(447, 52);
@@ -835,20 +872,20 @@
             this.tabControl1.Size = new System.Drawing.Size(981, 459);
             this.tabControl1.TabIndex = 0;
             // 
-            // dateTimePicker1
+            // dtPicker2
             // 
-            this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dtPicker2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(755, 34);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(203, 22);
-            this.dateTimePicker1.TabIndex = 19;
+            this.dtPicker2.Location = new System.Drawing.Point(740, 35);
+            this.dtPicker2.Name = "dtPicker2";
+            this.dtPicker2.Size = new System.Drawing.Size(139, 22);
+            this.dtPicker2.TabIndex = 19;
             // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(630, 35);
+            this.label23.Location = new System.Drawing.Point(615, 36);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(121, 17);
             this.label23.TabIndex = 20;
@@ -857,11 +894,70 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(630, 10);
+            this.label24.Location = new System.Drawing.Point(615, 11);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(119, 17);
             this.label24.TabIndex = 21;
             this.label24.Text = "Thời gian bắt đầu";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "ID";
+            this.dataGridViewTextBoxColumn7.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Name";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Name";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Weight";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Weight";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "ColorR";
+            this.dataGridViewTextBoxColumn10.HeaderText = "ColorR";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "colorG";
+            this.dataGridViewTextBoxColumn11.HeaderText = "colorG";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "colorB";
+            this.dataGridViewTextBoxColumn12.HeaderText = "colorB";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            // 
+            // dataGridViewCheckBoxColumn3
+            // 
+            this.dataGridViewCheckBoxColumn3.DataPropertyName = "okLight";
+            this.dataGridViewCheckBoxColumn3.HeaderText = "okLight";
+            this.dataGridViewCheckBoxColumn3.Name = "dataGridViewCheckBoxColumn3";
+            // 
+            // dataGridViewCheckBoxColumn4
+            // 
+            this.dataGridViewCheckBoxColumn4.DataPropertyName = "okNormal";
+            this.dataGridViewCheckBoxColumn4.HeaderText = "okNormal";
+            this.dataGridViewCheckBoxColumn4.Name = "dataGridViewCheckBoxColumn4";
+            // 
+            // dataBindingSource
+            // 
+            this.dataBindingSource.DataMember = "Data";
+            this.dataBindingSource.DataSource = this.bangchuyenDataSet;
+            // 
+            // bangchuyenDataSet
+            // 
+            this.bangchuyenDataSet.DataSetName = "BangchuyenDataSet";
+            this.bangchuyenDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bangchuyenDataSetBindingSource
             // 
@@ -878,15 +974,26 @@
             this.tableAdapterManager.DataTableAdapter = this.dataTableAdapter;
             this.tableAdapterManager.UpdateOrder = Bangchuyen.BangchuyenDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(885, 6);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(71, 49);
+            this.btnSearch.TabIndex = 22;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(979, 512);
+            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.label23);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtPicker2);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.DtPicker);
             this.Controls.Add(this.btnDisconnect);
@@ -906,17 +1013,21 @@
             this.tabAbout.ResumeLayout(false);
             this.tabExport.ResumeLayout(false);
             this.tabExport.PerformLayout();
+            this.tabChart.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ChartAll)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ChartOverview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ChartType)).EndInit();
             this.tabAnalysis.ResumeLayout(false);
             this.tabAnalysis.PerformLayout();
             this.tabFunction.ResumeLayout(false);
             this.tabFunction.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bangchuyenDataSet)).EndInit();
             this.tabInformation.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataDataGridView1)).EndInit();
             this.tabControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bangchuyenDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bangchuyenDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -982,7 +1093,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtPicker2;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label30;
@@ -1004,6 +1115,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn3;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn4;
+        private System.Windows.Forms.DataVisualization.Charting.Chart ChartAll;
+        private System.Windows.Forms.DataVisualization.Charting.Chart ChartOverview;
+        private System.Windows.Forms.DataVisualization.Charting.Chart ChartType;
+        private System.Windows.Forms.Button btnSearch;
     }
 }
 

@@ -85,6 +85,8 @@ namespace Bangchuyen
         {
             // TODO: This line of code loads data into the 'bangchuyenDataSet.Data' table. You can move, or remove it, as needed.
             this.dataTableAdapter.Fill(this.bangchuyenDataSet.Data);
+            dtPicker2.MinDate = DtPicker.Value;
+
             cbComp.DataSource = SerialPort.GetPortNames();
             cbRate.Items.Add(9600);
             cbRate.Items.Add(19200);
@@ -96,29 +98,19 @@ namespace Bangchuyen
             cbRate.Items.Add(250000);
             cbRate.SelectedIndex = 0;
             btnDisconnect.Enabled = false;
-            try
-            {
-                myConnection.Open();
-                MessageBox.Show("Kết nối thành công!");
-                cmd = new SqlCommand("insert into Data(Name, Weight, ColorR, ColorG, ColorB, okLight,okNormal) "+
-                    "values(@name, @weight, @colorr, @colorg, @colorb,@oklight,@oknormal)", myConnection);
+           
 
-                cmd.Parameters.AddWithValue("@name", DateTime.Parse("2017-01-01 00:00:00"));
-                cmd.Parameters.AddWithValue("@weight", 350);
-                cmd.Parameters.AddWithValue("@colorr", 230);
-                cmd.Parameters.AddWithValue("@colorg", 123);
-                cmd.Parameters.AddWithValue("@colorb", 123);
-                cmd.Parameters.AddWithValue("@oklight", 1);
-                cmd.Parameters.AddWithValue("@oknormal", 0);
-                cmd.ExecuteNonQuery();
-                myConnection.Close();
+            //#region chart
+            //ChartAll.Series["Đạt"].Points.AddXY("Tháng 1", 12);
+            //ChartAll.Series["Đạt"].Points.AddXY("Tháng 2", 23);
+            //ChartAll.Series["Lỗi"].Points.AddXY("Tháng 1", 34);
+            //ChartAll.Series["Lỗi"].Points.AddXY("Tháng 1", 45);
+            //ChartAll.Series["Đạt"].Points.AddXY("Tháng 2", 56);
+            //ChartAll.Series["Đạt"].Points.AddXY("Tháng 2", 34);
+            //ChartAll.Series["Lỗi"].Points.AddXY("Tháng 2", 67);
+            //#endregion
 
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Lỗi");
-            }
+           
         }
         #region Recieve data
         private void btnConnect_Click(object sender, EventArgs e)
@@ -223,5 +215,30 @@ namespace Bangchuyen
             
         }
 
+        private void DtPicker_ValueChanged(object sender, EventArgs e)
+        {
+            dtPicker2.MinDate = DtPicker.Value;
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            switch(tabControl1.SelectedIndex)
+            {
+                case 0:    //for information tab
+                    MessageBox.Show("hhi");
+                    break;
+                case 1: // function tab
+                    break;
+                case 2: //phan tich tab
+                    break;
+                case 3: // chart tab
+                    break;
+                case 4: // export tab
+                    break;
+                case 5: //tabAbout tab
+                    break;
+
+            }
+        }
     }
 }
