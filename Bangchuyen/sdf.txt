@@ -1,6 +1,4 @@
-sd
-<<<<<<< HEAD
-xoa hahaha
 
-
-bang chuyen 2
+=======
+?drferes
+>>>>>>> origin/master
