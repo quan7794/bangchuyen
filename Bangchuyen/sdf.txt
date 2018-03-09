@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 
 =======
 ?drferes
 >>>>>>> origin/master
+=======
+sd
+hohohoh
+>>>>>>> parent of a6082ae... sd
